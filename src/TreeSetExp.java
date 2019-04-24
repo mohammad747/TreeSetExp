@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.TreeSet;
 
 public class TreeSetExp {
@@ -28,7 +30,22 @@ public class TreeSetExp {
         treeSet2.add("L");
         treeSet2.add("P");
         //Showing the elements of both treeSets
-        System.out.println(treeSet1);
-        System.out.println(treeSet2);
+        System.out.println("TreeSet one: " + treeSet1);
+        System.out.println("TreeSet two: " + treeSet2);
+
+        //The union of the two treeSet
+        System.out.print("Union: " );
+        union(treeSet1,treeSet2);
     }
+
+    private static void union(TreeSet<String> treeSet1, TreeSet<String> treeSet2){
+        Collection<String> union = new ArrayList<>();
+
+        union.addAll(treeSet1);
+        union.addAll(treeSet2);
+
+        System.out.println(union);
+    }
+
+
 }
