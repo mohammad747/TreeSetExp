@@ -36,6 +36,10 @@ public class TreeSetExp {
         //The union of the two treeSet
         System.out.print("Union: " );
         union(treeSet1,treeSet2);
+
+        //The intersection of two treeSet
+        System.out.print("Intersection: ");
+        intersection(treeSet1,treeSet2);
     }
 
     private static void union(TreeSet<String> treeSet1, TreeSet<String> treeSet2){
@@ -45,6 +49,12 @@ public class TreeSetExp {
         union.addAll(treeSet2);
 
         System.out.println(union);
+    }
+
+    private static void intersection(TreeSet<String> treeSet1, TreeSet<String> treeSet2){
+        treeSet1.retainAll(treeSet2);
+
+        System.out.println(treeSet1);
     }
 
 
